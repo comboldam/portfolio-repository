@@ -1,0 +1,104 @@
+/* Scroll timelines: the same experience in full-size and narrow browser panes. */
+.hero-line{display:block;transform-origin:left center}
+.hero{padding:0;height:auto;overflow:visible;min-height:0;display:block}
+.hero-stage{height:100svh;min-height:800px;padding:162px var(--gutter) 55px;position:relative;overflow:hidden;display:flex;align-items:center}
+.visual-track{width:100%;min-width:0;--stage-height:560px}
+.motion-stage{position:relative;display:flex;justify-content:center;align-items:center;width:100%;padding:40px 10px 55px}
+.motion-stage>.quiz-visual,.motion-stage>.nova-visual,.motion-stage>.evaluation-visual{margin:0;flex:none}
+.motion-toggle{appearance:none;font:10px Arial,sans-serif;letter-spacing:.02em;color:inherit;background:none;border:1px solid currentColor;border-radius:20px;padding:8px 11px;cursor:pointer;white-space:nowrap}
+.motion-toggle[hidden]{display:none}.motion-toggle:focus-visible{outline:3px solid var(--rust);outline-offset:4px}.motion-toggle:hover{background:rgb(179 67 45 / .12)}
+.motion-toggle:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;display:inline-block;margin-right:6px;opacity:.3}.motion-toggle[aria-pressed="true"]:before{opacity:1}
+.motion .hero{height:calc(max(100svh,800px) + 65svh)}
+.motion .hero-stage{position:sticky;top:0}
+.motion .hero-content{transform:none;opacity:1}
+.motion .hero-line:nth-child(1){transform:translateX(calc(var(--hero-progress,0)*-140px)) scale(calc(1 - var(--hero-progress,0)*.12))}
+.motion .hero-line:nth-child(2){transform:translateX(calc(var(--hero-progress,0)*120px))}
+.motion .hero-line:nth-child(3){transform:translateX(calc(var(--hero-progress,0)*-60px))}
+.motion .hero-bottom{opacity:calc(1 - var(--hero-progress,0)*.8);transform:translateY(calc(var(--hero-progress,0)*60px))}
+.motion .hero-orbit{transform:rotate(calc(var(--hero-progress,0)*150deg)) scale(calc(1 + var(--hero-progress,0)*.55))}
+.motion .orbit-marker{transform:scale(calc(1 + var(--hero-progress,0)*3))}
+.motion .chapter{height:220svh;min-height:0}
+.motion .scene{min-height:0;height:100svh;position:sticky;top:0;overflow:clip}
+.motion .scene-grid{transform:none;opacity:1}
+.motion .quizzena .scene{clip-path:none}
+.motion .quiz-poster{transform:rotate(calc(-16deg + var(--assemble,0)*16deg)) scale(calc(.72 + var(--assemble,0)*.28))}
+.motion .mode-one{transform:translateX(calc((1 - var(--reveal-one,0))*-160px)) rotate(calc((1 - var(--reveal-one,0))*-12deg));opacity:calc(.25 + var(--reveal-one,0)*.75)}
+.motion .mode-two{transform:translateX(calc((1 - var(--reveal-two,0))*180px)) rotate(calc((1 - var(--reveal-two,0))*12deg));opacity:calc(.25 + var(--reveal-two,0)*.75)}
+.motion .mode-three{transform:translate(calc((1 - var(--reveal-three,0))*-130px),calc((1 - var(--reveal-three,0))*55px)) rotate(calc((1 - var(--reveal-three,0))*-8deg));opacity:calc(.25 + var(--reveal-three,0)*.75)}
+.motion .quiz-orbit{transform:rotate(calc(var(--phase,0)*90deg)) scale(calc(.8 + var(--phase,0)*.4));border-radius:calc(12% + var(--phase,0)*38%)}
+.motion .claim-ticket{transform:translate(calc(var(--assemble,0)*-30px),calc(var(--assemble,0)*-25px)) rotate(calc(-3deg - var(--assemble,0)*9deg)) scale(calc(1 - var(--assemble,0)*.06))}
+.motion .check-sheet{transform:translateY(calc((1 - var(--assemble,0))*115px)) rotate(calc((1 - var(--assemble,0))*14deg)) scale(calc(.75 + var(--assemble,0)*.25));transform-origin:center top}
+.motion .nova-visual .visual-caption{opacity:var(--reveal-three,0)}
+.motion .check-sheet li:nth-child(1){transform:translateX(calc((1 - var(--reveal-one,0))*35px));opacity:calc(.15 + var(--reveal-one,0)*.85)}
+.motion .check-sheet li:nth-child(2){transform:translateX(calc((1 - var(--reveal-two,0))*35px));opacity:calc(.15 + var(--reveal-two,0)*.85)}
+.motion .check-sheet li:nth-child(3){transform:translateX(calc((1 - var(--reveal-three,0))*35px));opacity:calc(.15 + var(--reveal-three,0)*.85)}
+.motion .comparison-title>div{transform:rotate(calc(-50deg + var(--assemble,0)*50deg)) scale(calc(.65 + var(--assemble,0)*.35))}
+.motion .comparison-study{transform:translateY(calc((1 - var(--assemble,0))*60px)) scale(calc(.83 + var(--assemble,0)*.17));transform-origin:bottom center}
+.motion .comparison-row:nth-child(2){transform:translateX(calc((1 - var(--reveal-one,0))*-45px));opacity:calc(.3 + var(--reveal-one,0)*.7)}
+.motion .comparison-row:nth-child(3){transform:translateX(calc((1 - var(--reveal-two,0))*65px));opacity:calc(.3 + var(--reveal-two,0)*.7)}
+.motion .comparison-path{clip-path:inset(0 calc((1 - var(--reveal-two,0))*100%) 0 0)}
+.motion .second-path{clip-path:inset(0 calc((1 - var(--reveal-three,0))*100%) 0 0)}
+.motion .comparison-path i{transform:none}
+.motion .thread-word{transform:translateX(calc((1 - var(--thread-progress,0))*70px))}
+.motion .thread-word:after{transform:scaleX(var(--thread-progress,0))}
+.motion .thread-mark{transform:rotate(calc(var(--thread-progress,0)*150deg)) scale(calc(.65 + var(--thread-progress,0)*.6))}
+/* Readable static fallback, including OS reduced motion unless explicitly enabled. */
+html.motion-reduced{scroll-behavior:auto}
+.motion-reduced *,.motion-reduced *:before,.motion-reduced *:after{animation:none!important;transition:none!important}
+html:not(.motion) .chapter{height:auto;min-height:0}
+html:not(.motion) .scene{position:relative;height:auto;min-height:0}
+html:not(.motion) .scene-grid{padding:45px 0}
+html:not(.motion) .hero-orbit,html:not(.motion) .thread-mark{transform:none}
+html:not(.motion) .thread-word:after{transform:none}
+html:not(.motion) .scene-progress{display:none}
+@media(min-width:901px) and (max-height:800px){.hero-stage{min-height:740px}.motion .hero{height:calc(max(100svh,740px) + 65svh)}.motion-stage{padding-top:15px;padding-bottom:35px}}
+@media(max-width:1100px){.header{gap:20px}.header nav{gap:20px}.version-link{padding-left:15px}.motion-stage{padding-left:0;padding-right:0}}
+@media(max-width:900px),(max-height:679px){
+ .hero-stage{height:100svh;min-height:740px;padding-top:145px;padding-bottom:110px}
+ .motion .hero{height:calc(max(100svh,740px) + 65svh)}
+ .motion .chapter{height:auto;min-height:0}
+ .motion .scene{position:relative;height:auto;min-height:0;overflow:clip;padding-bottom:80px}
+ .scene-grid{grid-template-columns:1fr;min-height:0;gap:25px;padding-top:38px}
+ .scene-copy{max-width:560px}
+ .scene h2{font-size:clamp(51px,7vw,76px)}
+ .project-intro,.project-detail{max-width:430px}
+ .visual-track{margin-top:0}
+ .motion .visual-track{height:calc(var(--stage-height) + 105svh)}
+ .motion .motion-stage{position:sticky;top:90px}
+ .motion-stage{padding:40px 10px 60px}
+ .motion-stage>.quiz-visual{max-width:340px;width:90%}
+ .motion-stage>.nova-visual{max-width:340px;width:90%;min-height:0}
+ .motion-stage>.evaluation-visual{max-width:360px;width:95%}
+ .claim-word{font-size:50px}.check-sheet{padding:20px}.check-sheet li{padding:13px 0}
+ .comparison-title>div{opacity:1}
+ .scene-footer{bottom:26px}
+}
+@media(max-width:620px){
+ .header nav{display:none}.header{gap:12px}.motion-toggle{font-size:9px;padding:7px 9px;margin-left:auto}.version-link{padding-left:10px;font-size:8px}
+ .hero-stage{min-height:700px;padding-top:125px;align-items:flex-start}
+ .motion .hero{height:calc(max(100svh,700px) + 60svh)}
+ .motion .hero-line:nth-child(1){transform:translateX(calc(var(--hero-progress,0)*-70px))}
+ .motion .hero-line:nth-child(2){transform:translateX(calc(var(--hero-progress,0)*55px))}
+ .motion .hero-line:nth-child(3){transform:translateX(calc(var(--hero-progress,0)*-40px))}
+ .motion .hero-orbit{right:-46vw;top:220px}
+ .motion .hero-orbit .orbit-marker{width:14vw}
+ .scene-grid{gap:22px}.scene h2{font-size:clamp(51px,12vw,72px)}
+ .motion .motion-stage{top:84px}
+ .motion-stage{padding:35px 8px 55px}
+ .motion-stage>.quiz-visual{max-width:300px;width:90%}
+ .motion-stage>.nova-visual{max-width:300px;width:90%;padding-top:115px}
+ .motion-stage>.evaluation-visual{max-width:330px;width:92%}
+ .quiz-poster{padding:20px}.poster-title{font-size:52px}.poster-top{font-size:6px;letter-spacing:.06em}
+ .poster-subtitle{margin-bottom:18px}.mode{font-size:20px;padding:13px 10px}.mode small{font-size:8px}.poster-bottom{padding-top:18px}
+ .claim-ticket{padding:19px}.claim-word{font-size:47px}.claim-stamp{font-size:9px}
+ .check-sheet{padding:20px}.check-sheet li{padding:12px 0}.check-sheet strong{font-size:23px}.check-sheet small{font-size:9px}
+ .comparison-study{padding:20px}.comparison-title{height:90px}.comparison-title>div{font-size:130px}.comparison-study>p{font-size:29px}.comparison-row{padding-top:18px;gap:12px}
+ .motion .mode-one{transform:translateX(calc((1 - var(--reveal-one,0))*-95px)) rotate(calc((1 - var(--reveal-one,0))*-12deg))}
+ .motion .mode-two{transform:translateX(calc((1 - var(--reveal-two,0))*100px)) rotate(calc((1 - var(--reveal-two,0))*12deg))}
+ .motion .mode-three{transform:translate(calc((1 - var(--reveal-three,0))*-80px),calc((1 - var(--reveal-three,0))*45px)) rotate(calc((1 - var(--reveal-three,0))*-8deg))}
+ .motion .check-sheet{transform:translateY(calc((1 - var(--assemble,0))*95px)) rotate(calc((1 - var(--assemble,0))*14deg)) scale(calc(.75 + var(--assemble,0)*.25))}
+}
+@media(max-height:679px){
+ .motion .hero{height:auto}.motion .hero-stage{position:relative;height:auto;min-height:690px}
+ .motion .motion-stage{top:74px}
+}

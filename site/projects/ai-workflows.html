@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NOVA, Maharram Hajiyev's independent AI-assistant project: defining requirements, checking observed behavior, and learning from failures.">
+  <meta name="theme-color" content="#f5f3eb">
+  <meta property="og:title" content="AI workflow prototyping &mdash; From a claim to a check">
+  <meta property="og:description" content="Exploring what it means for an AI-assisted task to be finished, useful, and verifiable.">
+  <meta property="og:type" content="article">
+  <title>AI Workflow Prototyping &mdash; Maharram Hajiyev</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html" aria-label="Maharram Hajiyev home">Maharram Hajiyev<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="../index.html#quizzena">Work</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Let&rsquo;s talk <span aria-hidden="true">&#8599;</span></a></nav>
+  </header>
+  <main id="main">
+    <header class="story-header wrap">
+      <a class="breadcrumb" href="../index.html#quizzena"><span aria-hidden="true">&#8592;</span> Selected work</a>
+      <div class="story-heading-row"><p class="eyebrow">02 / NOVA / AI workflow prototyping</p><span class="status-pill">Ongoing independent work</span></div>
+      <h1>From a claim<br>to <em>a check.</em></h1>
+      <p class="story-deck">NOVA is my independent AI-assistant project. Its central question: when an assistant says a task is finished, what lets a person verify that it actually worked?</p>
+      <dl class="story-facts"><div><dt>My role</dt><dd>Requirements &amp; outcome review</dd></div><div><dt>Focus</dt><dd>Verifiable AI-assisted work</dd></div><div><dt>Status</dt><dd>Ongoing prototyping</dd></div></dl>
+    </header>
+    <section class="process-figure wrap" aria-labelledby="process-title"><p class="eyebrow" id="process-title">A practical working loop</p><div class="process-grid"><div><span>01 / SPECIFY</span><h2>Define the result.</h2><p>Make the intended behavior and completion criteria explicit.</p></div><div><span>02 / CHECK</span><h2>Observe what happens.</h2><p>Compare the report with the behavior of the actual system.</p></div><div><span>03 / REVISE</span><h2>Use the mismatch.</h2><p>Document failures and direct the next correction.</p></div></div></section>
+    <div class="story-layout wrap">
+      <aside class="story-aside"><nav aria-label="On this page"><p class="eyebrow">The project story</p><a href="#problem">The practical problem</a><a href="#contribution">My contribution</a><a href="#method">How I approach it</a><a href="#example">A concrete example</a><a href="#learning">What I want to learn</a></nav></aside>
+      <div class="story-content">
+        <section id="problem"><h2>Completion needs something observable.</h2><p>Working with AI assistants has made me attentive to the gap between a reported outcome and a demonstrated one. A confident summary can be useful, but it still leaves a practical question: does the system behave as requested?</p><p>My independent prototyping explores that question through everyday development workflows. The focus is on making tasks understandable, reviewing their outcomes, and using failures to improve the next attempt.</p></section>
+        <section id="contribution"><h2>I define, inspect, and redirect.</h2><p>I specify requirements, set priorities, and define acceptance criteria. After an attempted change, I compare reported completion with observed behavior and document problems that require further work.</p><p>AI agents support implementation and technical test execution. My contribution is product and workflow direction: deciding what should happen, inspecting whether it did, and directing corrective work when the result falls short.</p><p>This division of work makes clear requirements especially valuable. The quality of a result depends partly on whether the desired behavior has been expressed precisely enough to check.</p></section>
+        <section id="method"><h2>Make the next check easier.</h2><p>I approach a task by identifying the behavior that would count as success. A useful completion criterion describes an outcome that can be inspected, rather than only the actions an assistant intends to take.</p><p>During review, I separate the plan, the attempted work, the reported result, and the behavior I can observe. When those disagree, the mismatch becomes a starting point for correction.</p><div class="story-callout"><p class="eyebrow">The guiding question</p><p>What evidence would make this result understandable to someone who did not watch the work happen?</p></div><p>Failure notes matter because they preserve what went wrong and what needs checking next time. I am interested in turning those observations into clearer requirements and more useful review practices.</p></section>
+        <section id="example"><h2>What should a progress report prove?</h2><p>Consider a task-status view. A label such as &ldquo;working&rdquo; is useful only if it corresponds to current work. A percentage also needs a basis: what is complete, what remains, and which evidence supports the estimate?</p><p>The following is an illustrative acceptance checklist. It explains the kind of review I want to make repeatable; it is not a report of a completed benchmark.</p><table class="story-table"><caption>An example of turning a request into checks</caption><thead><tr><th scope="col">Question</th><th scope="col">What I would inspect</th></tr></thead><tbody><tr><th scope="row">Is the status current?</th><td>A visible update time and behavior when fresh data is unavailable.</td></tr><tr><th scope="row">Is progress meaningful?</th><td>Completed deliverables and remaining steps behind the displayed estimate.</td></tr><tr><th scope="row">Can work continue?</th><td>A specific blocker, the next action, and who needs to act.</td></tr></tbody></table><p>This example captures a broader design problem: the person supervising an assistant needs enough information to decide whether to wait, inspect, or intervene. A visually polished status display cannot answer that question unless its underlying claims can be checked.</p></section>
+        <section id="learning"><h2>From practical lessons to evaluation.</h2><p>This work is an ongoing exploration. It has not yet produced a controlled benchmark or a validated estimate of time saved. The current contribution is the practice of defining tasks, reviewing outcomes, and documenting corrections.</p><p>The next question is how to evaluate that practice systematically. I want to understand which checks reduce repeated errors, which require too much human effort, and how a workflow can communicate uncertainty without becoming difficult to use.</p><h3>A bounded next experiment</h3><p>I would start with a small set of comparable tasks and define success before execution. Alongside the final result, I would record human corrections, repeated failures, and review time. A more detailed report would count as an improvement only if it helped someone reach or verify a useful outcome with reasonable effort.</p><p>These questions connect AI-assisted building with my broader interest in evaluation: a process should be judged by what it helps someone accomplish and by the evidence available to assess it.</p><a class="text-link" href="https://www.linkedin.com/in/maharram-hajiyev-3b8531110">Discuss this work <span aria-hidden="true">&#8599;</span></a></section>
+      </div>
+    </div>
+    <a class="story-next wrap" href="assistments.html"><div><p class="eyebrow">Next / Evaluation design</p><h2>Designing a fair comparison.</h2></div><span class="round-arrow" aria-hidden="true">&#8599;</span></a>
+  </main>
+  <footer class="site-footer wrap"><span>&copy; 2026 Maharram Hajiyev</span><div><a href="https://www.linkedin.com/in/maharram-hajiyev-3b8531110" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span><span class="sr-only"> (opens in a new tab)</span></a><a href="../index.html#contact">Get in touch</a><a href="#main">Back to top &#8593;</a></div></footer>
+</body>
+</html>

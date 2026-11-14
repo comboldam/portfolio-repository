@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="640" viewBox="0 0 660 640" role="img" aria-labelledby="title desc">
+  <title id="title">Three ways to play Quizzena</title>
+  <desc id="desc">Classic, Time Attack and 3 Hearts are the app's three quiz modes. Topic quizzes lead to answer feedback and progression. This is an editorial overview, not an app screenshot.</desc>
+  <style>@media(max-width:450px){.fine{display:none}}</style><rect width="660" height="640" fill="#f5f3eb"/>
+  <circle cx="525" cy="140" r="155" fill="none" stroke="#202c2a" opacity=".1"/>
+  <circle cx="525" cy="140" r="120" fill="none" stroke="#202c2a" opacity=".1"/>
+  <text class="fine" x="48" y="63" fill="#202c2a" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.5">CURIOSITY, ONE ROUND AT A TIME.</text>
+  <text x="45" y="158" fill="#202c2a" font-family="Georgia,serif" font-size="80" letter-spacing="-4">Quizzena.</text>
+  <text class="fine" x="49" y="200" fill="#202c2a" font-family="Arial,sans-serif" font-size="16">Three ways to play. A reason to keep exploring.</text>
+  <g transform="translate(48 258)">
+    <rect width="564" height="78" rx="3" fill="#202c2a"/>
+    <circle cx="39" cy="39" r="17" fill="none" stroke="#f5f3eb"/>
+    <path d="m35 30 12 9-12 9z" fill="#f5f3eb"/>
+    <text x="77" y="47" fill="#f5f3eb" font-family="Arial,sans-serif" font-size="28">Classic</text>
+    <text x="512" y="46" fill="#f5f3eb" font-family="Georgia,serif" font-size="22">01</text>
+  </g>
+  <g transform="translate(48 351)">
+    <rect width="564" height="78" rx="3" fill="#f5f3eb"/>
+    <circle cx="39" cy="40" r="15" fill="none" stroke="#202c2a" stroke-width="1.5"/>
+    <path d="M34 20h10M39 25v-5M39 30v11l8 4" fill="none" stroke="#202c2a" stroke-width="1.5"/>
+    <text x="77" y="47" fill="#202c2a" font-family="Arial,sans-serif" font-size="28">Time Attack</text>
+    <text x="512" y="46" fill="#202c2a" font-family="Georgia,serif" font-size="22">02</text>
+  </g>
+  <g transform="translate(48 444)">
+    <rect width="564" height="78" rx="3" fill="#b3432d"/>
+    <path d="M39 53 25 40C13 27 34 18 39 32 45 18 65 27 53 40Z" fill="none" stroke="#f5f3eb" stroke-width="1.7"/>
+    <text x="77" y="47" fill="#f5f3eb" font-family="Arial,sans-serif" font-size="28">3 Hearts</text>
+    <text x="512" y="46" fill="#f5f3eb" font-family="Georgia,serif" font-size="22">03</text>
+  </g>
+  <g class="fine"><path d="M49 560h563" stroke="#202c2a"/>
+  <text x="49" y="591" fill="#202c2a" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">TOPICS</text>
+  <path d="M128 587h52m-5-4 5 4-5 4" stroke="#202c2a" fill="none"/>
+  <text x="210" y="591" fill="#202c2a" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">FEEDBACK</text>
+  <path d="M313 587h52m-5-4 5 4-5 4" stroke="#202c2a" fill="none"/>
+  <text x="394" y="591" fill="#202c2a" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">PROGRESSION</text>
+</g></svg>
